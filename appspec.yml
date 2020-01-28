@@ -8,10 +8,12 @@ hooks:
     - location: script/stop_server.sh
       timeout: 3600
       runas: root     
+      
   AfterInstall:
     - location: script/start_server.sh
       timeout: 3600
       runas: root
+      
   ValidateService:
     - location: script/status_server.sh
       timeout: 3600
