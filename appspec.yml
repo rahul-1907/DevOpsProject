@@ -5,14 +5,14 @@ files:
     destination: /var/www/html/
 hooks:
   BeforeInstall:
-    - location: scripts/stop_server.sh
+    - location: scripts/stop_server
       timeout: 3600
-      runas: root
+     
   AfterInstall:
-    - location: scripts/start_server.sh
+    - location: scripts/start_server
       timeout: 3600
   ValidateService:
-    - location: scripts/status_server.sh
+    - location: scripts/status_server
       timeout: 3600
       runas: root
 
